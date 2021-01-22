@@ -411,7 +411,7 @@ contains
           spack(2) = a
           call send_commando(23)
           call MPI_BCAST(spack,2,MPI_INTEGER,0,E4D_COMM,ierr)
-          call MPI_RECV(pa,nnodes,MPI_REAL,ra,0,E4D_COMM,status,ierr)
+          call MPI_RECV(pa,nnodes,MPI_DOUBLE,ra,0,E4D_COMM,status,ierr)
        end if
        
        if(b .ne. 0) then
@@ -419,7 +419,7 @@ contains
           spack(2) = b
           call send_commando(23)
           call MPI_BCAST(spack,2,MPI_INTEGER,0,E4D_COMM,ierr)
-          call MPI_RECV(pb,nnodes,MPI_REAL,rb,0,E4D_COMM,status,ierr)
+          call MPI_RECV(pb,nnodes,MPI_DOUBLE,rb,0,E4D_COMM,status,ierr)
        end if
        
        do j=1,nnodes
@@ -435,7 +435,7 @@ contains
              spack(2) = a
              call send_commando(123)
              call MPI_BCAST(spack,2,MPI_INTEGER,0,E4D_COMM,ierr)
-             call MPI_RECV(pa,nnodes,MPI_REAL,ra,0,E4D_COMM,status,ierr)
+             call MPI_RECV(pa,nnodes,MPI_DOUBLE,ra,0,E4D_COMM,status,ierr)
           end if
          
           if(b .ne. 0) then
@@ -443,7 +443,7 @@ contains
              spack(2) = b
              call send_commando(123)
              call MPI_BCAST(spack,2,MPI_INTEGER,0,E4D_COMM,ierr)
-             call MPI_RECV(pb,nnodes,MPI_REAL,rb,0,E4D_COMM,status,ierr)
+             call MPI_RECV(pb,nnodes,MPI_DOUBLE,rb,0,E4D_COMM,status,ierr)
           end if
           
           do j=1,nnodes
