@@ -390,8 +390,8 @@ module exo_subs
          end if
          
          !!record the variable name
-         names(1) = trim("real_conductivity")
-         names(2) = trim("complex_conductivity")
+         names(1) = trim("Resitivity")
+         names(2) = trim("Phase")
          call expvan(idexo,"e",2,names(1:2),ierr)
 
          names(1) = trim("real_potential")
@@ -469,8 +469,8 @@ module exo_subs
          
          !record the variable name
 
-       names(1) = trim("real_conductivity")
-         names(2) = trim("complex_conductivity")
+       names(1) = trim("Resitivity")
+         names(2) = trim("Phase")
          call expvan(idexo,"e",2,names(1:2),ierr)
   
          names(1) = trim("real_potential")

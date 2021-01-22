@@ -142,6 +142,7 @@ contains
   !_______________________________________________________________________________________
   !_______________________________________________________________________________________
   subroutine write_sigma
+    ! Changed to output resitivity
     implicit none
     integer :: i
     character(20) :: fname=""
@@ -180,11 +181,11 @@ contains
        
        if(i_flag) then
           do i=1,nelem
-             write(12,*) sigma(i),real(sigmai(i))
+             write(12,*) 1.0/sigma(i), tan(real(sigmai(i)/sigma(i)))
           end do
        else
           do i=1,nelem
-             write(12,*) sigma(i)
+             write(12,*) 1.0/sigma(i)
           end do
        end if
 
@@ -194,6 +195,7 @@ contains
   !_______________________________________________________________________________________
   !_______________________________________________________________________________________
   subroutine write_sigmai
+    ! changed to output RESITIVITY and PHASE
     implicit none
     integer :: i
     character(20) :: fname=""
@@ -213,7 +215,7 @@ contains
     else
        write(12,*) nelem, 2
        do i=1,nelem
-          write(12,*) sigma(i), sigmai(i)
+          write(12,*) 1.0/sigma(i), sigmai(i)/sigma(i)
        end do
     end if
        close(12)
