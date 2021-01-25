@@ -990,6 +990,12 @@ contains
   end subroutine get_dobs_rt
   !_________________________________________________________________________
   !_________________________________________________________________________
+  
+  
+  
+  
+  !_________________________________________________________________________
+  !_________________________________________________________________________
   subroutine get_dobs_tl(ind)
     implicit none
     integer :: ind,ne_test,sflg,jnk,i,nmt,ios,j
@@ -1007,7 +1013,9 @@ contains
        if(ios .ne. 0) goto 99
        if(abs(etp(1)-e_pos(i,1)-xorig)>perr .or. abs(etp(2)-e_pos(i,2)-yorig)>perr .or. abs(etp(3)-e_pos(i,3)-zorig)>perr) goto 101
     end do
-
+    
+    
+    ! read n_measurements
     read(11,*,IOSTAT=ios) nmt
  
   
@@ -3086,6 +3094,8 @@ contains
     end do
     
 
+    call check_keywords(10)
+    
     !!Read in the survey
     read(10,*,IOSTAT=ios) nm;     call check_inp(17,nm)
     allocate(dobs(nm),s_conf(nm,4),Wd(nm))
@@ -3132,8 +3142,97 @@ contains
        close(10)
     end if
   end subroutine read_survey
+  
+  
   !_________________________________________________________________________
+  !_________________________________________________________________________
+  
+  subroutine check_keywords(FHNDL)
+    ! ------------------------------------------------------
+    !
+    ! Checks the file already open on index (FHNDL) for keywords on the current line. Backspaces at the end when it runs out of keywords.
+    ! Keywords MUST start with a letter. Cannot contain a colon ":"
+    !
+    ! Input: 
+    !        FHNDL (int) - file handler of file already open to be read
+    ! Output: 
+    !        Nothing
+    ! 
+    ! Global Var Changes:
+    !        Updates global vars if associated keywords are found:
+    !          IP_param_type (int)
+    !          Scale_Factor  (int)
+    !
+    ! ------------------------------------------------------
+    implicit none
+    
+    integer, intent(in)              :: FHNDL
+    integer                          :: i,j, k, IOS, len_arg, keywords_read
+    character(len=256), dimension(2) :: keywords
+    character(len=256)               :: keyword, arg
+    character(len=512)               :: TSTR, trimTSTR, junk
+    logical                          :: read_2_far=.False.
+    
+    keywords(1)="IP_PARAM_TYPE" ! type of IP param as defined in VARS
+    keywords(2)="SCALE_FACTOR"  ! scales IP values by set amount, default is 1
+    
+    keywords_read=0
+    
+    do i=1, 10
+      read(FHNDL,*, IOSTAT= IOS) TSTR
+      trimTSTR=ADJUSTL(TSTR)      
+      if(SCAN(trimTSTR(1:1),"12456789").gt.0) then
+        read_2_far=.true.
+        EXIT !no keyword, instead a number, indicating no more keywords
+      end if
+      
+      if(keywords_read.ge.size(keywords)) EXIT ! if no more keywords left
+      IF(IOS.ne.0) then
+        write(*,*) "ERROR! IOS ne 0 in CHECK_KEYWORDS"
+        call crash_exit
+      end if
+      
 
+      ! Read the keyword
+      do j=1, 256
+        if( trimTSTR(j:j) .eq."=") then
+          keyword=trimTSTR(1:j-1)
+          len_arg=0
+          !find length of argument
+          do k=j+1, 256
+            IF(trimTSTR(k:k).eq.' ') EXIT
+            len_arg=len_arg+1
+          end do
+          arg=trimTSTR(j:j+len_arg-1)
+          !grab keyword. Not sure if there's a better way to do this than hardcoding. Maybe an array of parameters?
+          if      (keyword.eq.trim(keywords(1))) then
+            READ(trimTSTR(j+1:),*) IP_Param_type
+          else if (keyword.eq.trim(keywords(2))) then
+            READ(trimTSTR(j+1:),*) Scale_Factor       
+          else
+            write(*,*) "ERROR! UNKNOWN KEYWORD DETECTED IN .SRV FILE. EXITING"
+            call crash_exit
+          end if
+          ! Now that we've read the keyword, exit keyword read loop.
+          keywords_read=keywords_read+1
+          EXIT
+        end if
+      end do
+      
+    end do
+    
+    if(read_2_far) BACKSPACE(FHNDL, IOSTAT=IOS)  ! If we've readthe number of measurements go back 1.
+    IF(IOS.ne.0) then 
+      write(*,*) "ERROR! IOS ne 0 in CHECK_KEYWORDS"
+      call crash_exit
+    end if
+    
+    
+    
+  end subroutine
+  
+  
+  !_________________________________________________________________________
   !_________________________________________________________________________
   subroutine translate_electrodes
     implicit none
