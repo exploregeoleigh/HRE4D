@@ -1,0 +1,1049 @@
+ ************************ WELCOME TO E4D ************************
+ Copyright © 2014, Battelle Memorial Institute
+ All rights reserved.
+ Current date:  March 05, 2021
+ Current time:  15:54:59
+ Running on 0000020 processing cores
+ ****************************************************************
+
+ **************** RUNNING IN SIP INVERSION MODE *****************
+  Mode:                             023
+  Mesh file:                        mesh.1.node
+  Survey configuration file:        survey.srv
+  Starting conductivity file:       average
+  Output options file:              output.out
+  Inverse options file (amp.):      dc.inv
+  Inverse options file (phase):     ip.inv
+  Reference model file:             none
+
+  SURVEY FILE SUMMARY
+  Number of electrodes:             0000326
+  Number of measurements:           0005060
+  Number of nodes:                  0000094395
+
+  Maximum surface node elevation:      85.789284860399988     
+  Minimum surface node elevation:      9.3319408003999982     
+  Using surface elevation of    :      85.789284860399988     
+   !!! WARNING: It appears there may be some surface variability.
+   !!! The analytic solution requires a flat surface.
+  Minimum apparent conductivity :   .75975E-03
+  Maximum apparent conductivity :   .54078    
+  Using conductivity            :   .79512E-02
+  Minimum apparent phase        :   .41400E-03
+  Maximum apparent phase        :   .35599E-01
+  Using phase                   :   .69569E-02
+
+  MESH SUMMARY
+  Number of nodes:                  0000094395
+  Number of metallic boundaries:    0000000000
+  Number of elements:               0000470504
+  Number of zones:                  0000000002
+
+  LOAD SUMMARY
+  Max # of pole soln's per core:    0000000018
+  Max # of data rows per core:      0000000267
+  Min # of pole soln's per core:    0000000017
+  Min # of data rows per core:      0000000266
+
+  AMPLITUDE INVERSION OPTIONS 
+  Amplitude inversion options file: dc.inv
+  Number of constraint blocks:      002
+
+            CONSTRAINT BLOCK:          1
+                 Zone Number:          1
+            Structure Metric:          2
+        Reweighting Function:          1
+   Reweighting Mean, St.Dev.:          10.00    0.1000E-01
+        Number of Zone Links:          1
+              Linked to Zone:          2
+             Relative Weight:          1.000    
+
+            CONSTRAINT BLOCK:          2
+                 Zone Number:          2
+            Structure Metric:          2
+        Reweighting Function:          1
+   Reweighting Mean, St.Dev.:          10.00    0.1000E-01
+        Number of Zone Links:          0
+             Relative Weight:          1.000    
+
+         Starting beta value:          10.00    
+ Minimum objective reduction:          0.2000    
+    Beta reduction parameter:          0.9000    
+    Target chi-squared value:          1.000    
+  Minimum # inner iterations:        100
+  Maximum # inner iterations:        100
+        Maximum conductivity:           10.00    
+        Minimum conductivity:          0.1000E-05
+               Update option:          No line search
+  Data culling st. deviation:          3.000    
+
+ ********** CONVERGENCE STATISTICS AT STARTING MODEL *******************
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+    0.80015E+06     0.0000         0.0000        0.80015E+06
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           0.0000                   0.0000    
+     2            123368           0.0000                   0.0000    
+
+ Chi2 is currently  159.7       Target value is 1.0000    
+ Mean error is -4.644    
+ RMS error is  12.64    
+ Number of data culled is 0000049
+ Prior to data culling ...
+    Chi2 is  616.2    
+    Mean error is -6.127    
+    RMS error is  24.82    
+ ***********************************************************************
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 001 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     81783.         16114.         1611.4         97898.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           94.362                  0.18430E-01
+     2            123368           5.6381                  0.14995E-01
+
+ Chi2 is currently  16.31       Target value is 1.0000    
+ Mean error is -.7243    
+ RMS error is  4.039    
+ Number of data culled is 0000046
+ Prior to data culling ...
+    Chi2 is  59.07    
+    Mean error is -1.197    
+    RMS error is  7.686    
+ ***********************************************************************
+Decrease in objective function is: 0.8777    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 002 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     25898.         23687.         2368.7         49586.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           94.883                  0.21982E-01
+     2            123368           5.1174                  0.16145E-01
+
+ Chi2 is currently  5.158       Target value is 1.0000    
+ Mean error is -.3616    
+ RMS error is  2.271    
+ Number of data culled is 0000039
+ Prior to data culling ...
+    Chi2 is  12.66    
+    Mean error is -.5444    
+    RMS error is  3.559    
+ ***********************************************************************
+Decrease in objective function is: 0.4935    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 003 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     21792.         25102.         2510.2         46894.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           94.975                  0.22577E-01
+     2            123368           5.0251                  0.16267E-01
+
+ Chi2 is currently  4.336       Target value is 1.0000    
+ Mean error is -.5415    
+ RMS error is  2.082    
+ Number of data culled is 0000034
+ Prior to data culling ...
+    Chi2 is  11.27    
+    Mean error is -.6923    
+    RMS error is  3.357    
+ ***********************************************************************
+Decrease in objective function is: 0.5428E-01
+Solution did not converge at beta =  10.00    
+Decreasing beta by 0.9000     from  10.00     to  9.000    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 004 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     19814.         23963.         2662.6         43777.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.062                  0.23323E-01
+     2            123368           4.9385                  0.16499E-01
+
+ Chi2 is currently  3.940       Target value is 1.0000    
+ Mean error is -.5972    
+ RMS error is  1.985    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  10.56    
+    Mean error is -.7437    
+    RMS error is  3.249    
+ ***********************************************************************
+Decrease in objective function is: 0.6647E-01
+Solution did not converge at beta =  9.000    
+Decreasing beta by 0.9000     from  9.000     to  8.100    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 005 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     18167.         22742.         2807.7         40909.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.127                  0.24067E-01
+     2            123368           4.8727                  0.16787E-01
+
+ Chi2 is currently  3.614       Target value is 1.0000    
+ Mean error is -.6295    
+ RMS error is  1.901    
+ Number of data culled is 0000033
+ Prior to data culling ...
+    Chi2 is  10.10    
+    Mean error is -.7648    
+    RMS error is  3.178    
+ ***********************************************************************
+Decrease in objective function is: 0.6550E-01
+Solution did not converge at beta =  8.100    
+Decreasing beta by 0.9000     from  8.100     to  7.290    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 006 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     17019.         21548.         2955.9         38568.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.192                  0.24807E-01
+     2            123368           4.8076                  0.17061E-01
+
+ Chi2 is currently  3.385       Target value is 1.0000    
+ Mean error is -.6530    
+ RMS error is  1.840    
+ Number of data culled is 0000032
+ Prior to data culling ...
+    Chi2 is  10.50    
+    Mean error is -.7868    
+    RMS error is  3.240    
+ ***********************************************************************
+Decrease in objective function is: 0.5725E-01
+Solution did not converge at beta =  7.290    
+Decreasing beta by 0.9000     from  7.290     to  6.561    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 007 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     15948.         20330.         3098.6         36278.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.242                  0.25515E-01
+     2            123368           4.7576                  0.17356E-01
+
+ Chi2 is currently  3.172       Target value is 1.0000    
+ Mean error is -.6730    
+ RMS error is  1.781    
+ Number of data culled is 0000032
+ Prior to data culling ...
+    Chi2 is  10.11    
+    Mean error is -.8034    
+    RMS error is  3.180    
+ ***********************************************************************
+Decrease in objective function is: 0.5936E-01
+Solution did not converge at beta =  6.561    
+Decreasing beta by 0.9000     from  6.561     to  5.905    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 008 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     15134.         19136.         3240.7         34271.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.287                  0.26186E-01
+     2            123368           4.7129                  0.17637E-01
+
+ Chi2 is currently  3.009       Target value is 1.0000    
+ Mean error is -.6941    
+ RMS error is  1.735    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  9.773    
+    Mean error is -.8198    
+    RMS error is  3.126    
+ ***********************************************************************
+Decrease in objective function is: 0.5534E-01
+Solution did not converge at beta =  5.905    
+Decreasing beta by 0.9000     from  5.905     to  5.314    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 009 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     14239.         18018.         3390.3         32256.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.338                  0.26878E-01
+     2            123368           4.6623                  0.17899E-01
+
+ Chi2 is currently  2.831       Target value is 1.0000    
+ Mean error is -.7082    
+ RMS error is  1.683    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  9.479    
+    Mean error is -.8319    
+    RMS error is  3.079    
+ ***********************************************************************
+Decrease in objective function is: 0.5877E-01
+Solution did not converge at beta =  5.314    
+Decreasing beta by 0.9000     from  5.314     to  4.783    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 010 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     13478.         16922.         3538.0         30400.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.383                  0.27552E-01
+     2            123368           4.6173                  0.18162E-01
+
+ Chi2 is currently  2.680       Target value is 1.0000    
+ Mean error is -.7249    
+ RMS error is  1.637    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  9.198    
+    Mean error is -.8463    
+    RMS error is  3.033    
+ ***********************************************************************
+Decrease in objective function is: 0.5755E-01
+Solution did not converge at beta =  4.783    
+Decreasing beta by 0.9000     from  4.783     to  4.305    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 011 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     12787.         15880.         3689.0         28667.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.427                  0.28228E-01
+     2            123368           4.5728                  0.18420E-01
+
+ Chi2 is currently  2.543       Target value is 1.0000    
+ Mean error is -.7389    
+ RMS error is  1.595    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  8.918    
+    Mean error is -.8578    
+    RMS error is  2.986    
+ ***********************************************************************
+Decrease in objective function is: 0.5701E-01
+Solution did not converge at beta =  4.305    
+Decreasing beta by 0.9000     from  4.305     to  3.874    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 012 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     12075.         14889.         3843.2         26965.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.466                  0.28905E-01
+     2            123368           4.5338                  0.18693E-01
+
+ Chi2 is currently  2.402       Target value is 1.0000    
+ Mean error is -.7541    
+ RMS error is  1.550    
+ Number of data culled is 0000032
+ Prior to data culling ...
+    Chi2 is  8.662    
+    Mean error is -.8690    
+    RMS error is  2.943    
+ ***********************************************************************
+Decrease in objective function is: 0.5937E-01
+Solution did not converge at beta =  3.874    
+Decreasing beta by 0.9000     from  3.874     to  3.487    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 013 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     11517.         13979.         4009.1         25496.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.520                  0.29632E-01
+     2            123368           4.4797                  0.18923E-01
+
+ Chi2 is currently  2.290       Target value is 1.0000    
+ Mean error is -.7682    
+ RMS error is  1.513    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  8.439    
+    Mean error is -.8789    
+    RMS error is  2.905    
+ ***********************************************************************
+Decrease in objective function is: 0.5448E-01
+Solution did not converge at beta =  3.487    
+Decreasing beta by 0.9000     from  3.487     to  3.138    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 014 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     10905.         13101.         4174.7         24006.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.568                  0.30343E-01
+     2            123368           4.4318                  0.19161E-01
+
+ Chi2 is currently  2.168       Target value is 1.0000    
+ Mean error is -.7780    
+ RMS error is  1.473    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  8.195    
+    Mean error is -.8865    
+    RMS error is  2.863    
+ ***********************************************************************
+Decrease in objective function is: 0.5843E-01
+Solution did not converge at beta =  3.138    
+Decreasing beta by 0.9000     from  3.138     to  2.824    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 015 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     10468.         12265.         4342.6         22733.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.612                  0.31047E-01
+     2            123368           4.3877                  0.19401E-01
+
+ Chi2 is currently  2.081       Target value is 1.0000    
+ Mean error is -.7897    
+ RMS error is  1.443    
+ Number of data culled is 0000030
+ Prior to data culling ...
+    Chi2 is  7.996    
+    Mean error is -.8948    
+    RMS error is  2.828    
+ ***********************************************************************
+Decrease in objective function is: 0.5304E-01
+Solution did not converge at beta =  2.824    
+Decreasing beta by 0.9000     from  2.824     to  2.542    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 016 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     9931.4         11518.         4531.4         21450.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.661                  0.31816E-01
+     2            123368           4.3394                  0.19653E-01
+
+ Chi2 is currently  1.974       Target value is 1.0000    
+ Mean error is -.7974    
+ RMS error is  1.405    
+ Number of data culled is 0000030
+ Prior to data culling ...
+    Chi2 is  7.826    
+    Mean error is -.9013    
+    RMS error is  2.798    
+ ***********************************************************************
+Decrease in objective function is: 0.5643E-01
+Solution did not converge at beta =  2.542    
+Decreasing beta by 0.9000     from  2.542     to  2.288    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 017 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     9420.4         10777.         4710.9         20197.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.704                  0.32543E-01
+     2            123368           4.2964                  0.19895E-01
+
+ Chi2 is currently  1.873       Target value is 1.0000    
+ Mean error is -.8088    
+ RMS error is  1.369    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  7.658    
+    Mean error is -.9096    
+    RMS error is  2.767    
+ ***********************************************************************
+Decrease in objective function is: 0.5838E-01
+Solution did not converge at beta =  2.288    
+Decreasing beta by 0.9000     from  2.288     to  2.059    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 018 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     9009.1         10092.         4901.5         19101.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.746                  0.33300E-01
+     2            123368           4.2537                  0.20146E-01
+
+ Chi2 is currently  1.791       Target value is 1.0000    
+ Mean error is -.8172    
+ RMS error is  1.338    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  7.493    
+    Mean error is -.9161    
+    RMS error is  2.737    
+ ***********************************************************************
+Decrease in objective function is: 0.5430E-01
+Solution did not converge at beta =  2.059    
+Decreasing beta by 0.9000     from  2.059     to  1.853    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 019 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     8624.1         9442.3         5095.6         18066.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.781                  0.34062E-01
+     2            123368           4.2189                  0.20430E-01
+
+ Chi2 is currently  1.715       Target value is 1.0000    
+ Mean error is -.8249    
+ RMS error is  1.310    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  7.350    
+    Mean error is -.9225    
+    RMS error is  2.711    
+ ***********************************************************************
+Decrease in objective function is: 0.5416E-01
+Solution did not converge at beta =  1.853    
+Decreasing beta by 0.9000     from  1.853     to  1.668    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 020 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     8257.4         8835.5         5298.0         17093.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.817                  0.34836E-01
+     2            123368           4.1826                  0.20707E-01
+
+ Chi2 is currently  1.642       Target value is 1.0000    
+ Mean error is -.8315    
+ RMS error is  1.281    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  7.213    
+    Mean error is -.9277    
+    RMS error is  2.686    
+ ***********************************************************************
+Decrease in objective function is: 0.5388E-01
+Solution did not converge at beta =  1.668    
+Decreasing beta by 0.9000     from  1.668     to  1.501    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 021 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     7913.2         8268.4         5508.8         16182.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.851                  0.35626E-01
+     2            123368           4.1486                  0.20997E-01
+
+ Chi2 is currently  1.574       Target value is 1.0000    
+ Mean error is -.8388    
+ RMS error is  1.254    
+ Number of data culled is 0000031
+ Prior to data culling ...
+    Chi2 is  7.082    
+    Mean error is -.9337    
+    RMS error is  2.661    
+ ***********************************************************************
+Decrease in objective function is: 0.5332E-01
+Solution did not converge at beta =  1.501    
+Decreasing beta by 0.9000     from  1.501     to  1.351    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 022 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     7655.9         7740.2         5729.8         15396.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.888                  0.36436E-01
+     2            123368           4.1123                  0.21279E-01
+
+ Chi2 is currently  1.522       Target value is 1.0000    
+ Mean error is -.8470    
+ RMS error is  1.234    
+ Number of data culled is 0000030
+ Prior to data culling ...
+    Chi2 is  6.965    
+    Mean error is -.9392    
+    RMS error is  2.639    
+ ***********************************************************************
+Decrease in objective function is: 0.4854E-01
+Solution did not converge at beta =  1.351    
+Decreasing beta by 0.9000     from  1.351     to  1.216    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 023 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     7359.6         7274.6         5983.6         14634.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.911                  0.37323E-01
+     2            123368           4.0886                  0.21666E-01
+
+ Chi2 is currently  1.463       Target value is 1.0000    
+ Mean error is -.8526    
+ RMS error is  1.209    
+ Number of data culled is 0000029
+ Prior to data culling ...
+    Chi2 is  6.856    
+    Mean error is -.9421    
+    RMS error is  2.618    
+ ***********************************************************************
+Decrease in objective function is: 0.4948E-01
+Solution did not converge at beta =  1.216    
+Decreasing beta by 0.9000     from  1.216     to  1.094    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 024 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     7031.0         6827.8         6240.1         13859.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.977                  0.38217E-01
+     2            123368           4.0234                  0.21816E-01
+
+ Chi2 is currently  1.398       Target value is 1.0000    
+ Mean error is -.8573    
+ RMS error is  1.182    
+ Number of data culled is 0000029
+ Prior to data culling ...
+    Chi2 is  6.861    
+    Mean error is -.9461    
+    RMS error is  2.619    
+ ***********************************************************************
+Decrease in objective function is: 0.5298E-01
+Solution did not converge at beta =  1.094    
+Decreasing beta by 0.9000     from  1.094     to 0.9848    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 025 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     6754.1         6397.6         6496.6         13152.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.024                  0.39081E-01
+     2            123368           3.9759                  0.22035E-01
+
+ Chi2 is currently  1.342       Target value is 1.0000    
+ Mean error is -.8630    
+ RMS error is  1.159    
+ Number of data culled is 0000029
+ Prior to data culling ...
+    Chi2 is  6.795    
+    Mean error is -.9510    
+    RMS error is  2.607    
+ ***********************************************************************
+Decrease in objective function is: 0.5102E-01
+Solution did not converge at beta = 0.9848    
+Decreasing beta by 0.9000     from 0.9848     to 0.8863    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 026 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     6497.6         5995.1         6764.2         12493.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.078                  0.39963E-01
+     2            123368           3.9221                  0.22215E-01
+
+ Chi2 is currently  1.292       Target value is 1.0000    
+ Mean error is -.8681    
+ RMS error is  1.136    
+ Number of data culled is 0000029
+ Prior to data culling ...
+    Chi2 is  6.695    
+    Mean error is -.9553    
+    RMS error is  2.588    
+ ***********************************************************************
+Decrease in objective function is: 0.5011E-01
+Solution did not converge at beta = 0.8863    
+Decreasing beta by 0.9000     from 0.8863     to 0.7977    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 027 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     6309.7         5626.3         7053.5         11936.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.152                  0.40900E-01
+     2            123368           3.8483                  0.22291E-01
+
+ Chi2 is currently  1.254       Target value is 1.0000    
+ Mean error is -.8749    
+ RMS error is  1.120    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.612    
+    Mean error is -.9597    
+    RMS error is  2.571    
+ ***********************************************************************
+Decrease in objective function is: 0.4456E-01
+Solution did not converge at beta = 0.7977    
+Decreasing beta by 0.9000     from 0.7977     to 0.7179    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 028 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     6021.0         5290.3         7369.2         11311.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.212                  0.41881E-01
+     2            123368           3.7875                  0.22451E-01
+
+ Chi2 is currently  1.197       Target value is 1.0000    
+ Mean error is -.8770    
+ RMS error is  1.094    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.532    
+    Mean error is -.9611    
+    RMS error is  2.556    
+ ***********************************************************************
+Decrease in objective function is: 0.5233E-01
+Solution did not converge at beta = 0.7179    
+Decreasing beta by 0.9000     from 0.7179     to 0.6461    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 029 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5798.3         4970.5         7693.0         10769.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.271                  0.42864E-01
+     2            123368           3.7289                  0.22608E-01
+
+ Chi2 is currently  1.152       Target value is 1.0000    
+ Mean error is -.8817    
+ RMS error is  1.073    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.460    
+    Mean error is -.9650    
+    RMS error is  2.542    
+ ***********************************************************************
+Decrease in objective function is: 0.4796E-01
+Solution did not converge at beta = 0.6461    
+Decreasing beta by 0.9000     from 0.6461     to 0.5815    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 030 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5580.2         4673.7         8037.3         10254.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.318                  0.43866E-01
+     2            123368           3.6821                  0.22835E-01
+
+ Chi2 is currently  1.109       Target value is 1.0000    
+ Mean error is -.8859    
+ RMS error is  1.053    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.395    
+    Mean error is -.9686    
+    RMS error is  2.529    
+ ***********************************************************************
+Decrease in objective function is: 0.4782E-01
+Solution did not converge at beta = 0.5815    
+Decreasing beta by 0.9000     from 0.5815     to 0.5233    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 031 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5388.7         4399.7         8406.9         9788.5    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.375                  0.44906E-01
+     2            123368           3.6249                  0.23000E-01
+
+ Chi2 is currently  1.071       Target value is 1.0000    
+ Mean error is -.8889    
+ RMS error is  1.035    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.302    
+    Mean error is -.9707    
+    RMS error is  2.510    
+ ***********************************************************************
+Decrease in objective function is: 0.4539E-01
+Solution did not converge at beta = 0.5233    
+Decreasing beta by 0.9000     from 0.5233     to 0.4710    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 032 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5175.5         4145.8         8801.8         9321.3    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.399                  0.45974E-01
+     2            123368           3.6005                  0.23383E-01
+
+ Chi2 is currently  1.029       Target value is 1.0000    
+ Mean error is -.8937    
+ RMS error is  1.014    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.190    
+    Mean error is -.9745    
+    RMS error is  2.488    
+ ***********************************************************************
+Decrease in objective function is: 0.4773E-01
+Solution did not converge at beta = 0.4710    
+Decreasing beta by 0.9000     from 0.4710     to 0.4239    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 033 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5021.3         3910.0         9223.6         8931.3    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.459                  0.47074E-01
+     2            123368           3.5409                  0.23531E-01
+
+ Chi2 is currently 0.9979       Target value is 1.0000    
+ Mean error is -.8979    
+ RMS error is 0.9989    
+ Number of data culled is 0000028
+ Prior to data culling ...
+    Chi2 is  6.121    
+    Mean error is -.9777    
+    RMS error is  2.474    
+ ***********************************************************************
+Decrease in objective function is: 0.4184E-01
+Solution did not converge at beta = 0.4239    
+Decreasing beta by 0.9000     from 0.4239     to 0.3815    
+ SOLUTION CONVERGED
+ _____________ADJUSTING FINAL SOLUTION FOR TIME_________________
+
+ ********** FINAL SOLUTION ADJUSTMENT **************
+        Phi_dat        Phi_Mod   Phi_Mod/Beta        Phi_Tot
+       5033.700       3507.292       9192.933       8540.992
+ Chi2 is currently   1.0003378471401778      Target value is    1.0000000000000000     
+ Mean error is  -0.89783546683852844     
+ RMS error is    2.6686185637781890     
+ Number of data culled is           28
+ PRIOR TO DATA CULLING
+ Phi_dat is    31001.345251910512     
+ Chi2 is    6.1267480735001012     
+ Mean error is  -0.97768465850231812     
+ RMS error is    2.6612247914268221     
+ ********************************************************
+
+ ********** CONVERGENCE STATISTICS AT STARTING MODEL *******************
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+    0.20655E+07     0.0000         0.0000        0.20655E+07
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           0.0000                   0.0000    
+     2            123368           0.0000                   0.0000    
+
+ Chi2 is currently  412.1       Target value is 1.0000    
+ Mean error is  5.893    
+ RMS error is  20.30    
+ Number of data culled is 0000048
+ Prior to data culling ...
+    Chi2 is  1666.    
+    Mean error is  8.191    
+    RMS error is  40.81    
+ ***********************************************************************
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 001 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+    0.34895E+07     126.22         12.622        0.34896E+07
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           88.428                  0.41481E-03
+     2            123368           11.572                  0.73917E-03
+
+ Chi2 is currently  696.6       Target value is 1.0000    
+ Mean error is  9.725    
+ RMS error is  26.39    
+ Number of data culled is 0000051
+ Prior to data culling ...
+    Chi2 is  1130.    
+    Mean error is  8.542    
+    RMS error is  33.61    
+ ***********************************************************************
+Decrease in objective function is: -.6895    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 002 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+    0.55409E+06     34.274         3.4274        0.55413E+06
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           90.905                  0.22044E-03
+     2            123368           9.0949                  0.30032E-03
+
+ Chi2 is currently  111.1       Target value is 1.0000    
+ Mean error is  5.519    
+ RMS error is  10.54    
+ Number of data culled is 0000072
+ Prior to data culling ...
+    Chi2 is  145.3    
+    Mean error is  5.634    
+    RMS error is  12.06    
+ ***********************************************************************
+Decrease in objective function is: 0.8412    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 003 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     44926.         4.8131        0.48131         44931.    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           92.302                  0.10914E-03
+     2            123368           7.6979                  0.12395E-03
+
+ Chi2 is currently  9.014       Target value is 1.0000    
+ Mean error is 0.3234    
+ RMS error is  3.002    
+ Number of data culled is 0000076
+ Prior to data culling ...
+    Chi2 is  12.83    
+    Mean error is 0.3801    
+    RMS error is  3.582    
+ ***********************************************************************
+Decrease in objective function is: 0.9189    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 004 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     7859.9         1.0577        0.10577         7861.0    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           95.743                  0.88706E-04
+     2            123368           4.2574                  0.53714E-04
+
+ Chi2 is currently  1.569       Target value is 1.0000    
+ Mean error is -.7987    
+ RMS error is  1.253    
+ Number of data culled is 0000050
+ Prior to data culling ...
+    Chi2 is  3.697    
+    Mean error is -.8103    
+    RMS error is  1.923    
+ ***********************************************************************
+Decrease in objective function is: 0.8250    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 005 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5802.5        0.52297        0.52297E-01     5803.1    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.711                  0.83720E-04
+     2            123368           3.2885                  0.38765E-04
+
+ Chi2 is currently  1.156       Target value is 1.0000    
+ Mean error is -1.054    
+ RMS error is  1.075    
+ Number of data culled is 0000039
+ Prior to data culling ...
+    Chi2 is  3.242    
+    Mean error is -1.078    
+    RMS error is  1.801    
+ ***********************************************************************
+Decrease in objective function is: 0.2618    
+Decrease in objective function is sufficient to continue at beta =  10.00    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 006 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5658.3        0.43806        0.43806E-01     5658.8    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.889                  0.82403E-04
+     2            123368           3.1114                  0.36034E-04
+
+ Chi2 is currently  1.127       Target value is 1.0000    
+ Mean error is -1.104    
+ RMS error is  1.062    
+ Number of data culled is 0000040
+ Prior to data culling ...
+    Chi2 is  3.306    
+    Mean error is -1.123    
+    RMS error is  1.818    
+ ***********************************************************************
+Decrease in objective function is: 0.2487E-01
+Solution did not converge at beta =  10.00    
+Decreasing beta by 0.9000     from  10.00     to  9.000    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 007 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5420.7        0.39219        0.43576E-01     5421.1    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.852                  0.83657E-04
+     2            123368           3.1477                  0.37024E-04
+
+ Chi2 is currently  1.080       Target value is 1.0000    
+ Mean error is -1.106    
+ RMS error is  1.039    
+ Number of data culled is 0000041
+ Prior to data culling ...
+    Chi2 is  3.318    
+    Mean error is -1.122    
+    RMS error is  1.822    
+ ***********************************************************************
+Decrease in objective function is: 0.4199E-01
+Solution did not converge at beta =  9.000    
+Decreasing beta by 0.9000     from  9.000     to  8.100    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 008 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     5193.6        0.36658        0.45256E-01     5194.0    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.866                  0.85591E-04
+     2            123368           3.1343                  0.37713E-04
+
+ Chi2 is currently  1.035       Target value is 1.0000    
+ Mean error is -1.102    
+ RMS error is  1.017    
+ Number of data culled is 0000041
+ Prior to data culling ...
+    Chi2 is  3.278    
+    Mean error is -1.118    
+    RMS error is  1.811    
+ ***********************************************************************
+Decrease in objective function is: 0.4190E-01
+Solution did not converge at beta =  8.100    
+Decreasing beta by 0.9000     from  8.100     to  7.290    
+
+ ********** CONVERGENCE STATISTICS AFTER INVERSE UPDATE # 009 **********
+    Phi_dat        Phi_Mod     Phi_Mod/Beta      Phi_Tot    
+     4957.8        0.34547        0.47389E-01     4958.1    
+
+ Total Number of Constraint Eqs: 0001803309
+ Block     # Constraints     % of Total Error     Error per Constraint
+     1           1679941           96.875                  0.87629E-04
+     2            123368           3.1251                  0.38494E-04
+
+ Chi2 is currently 0.9878       Target value is 1.0000    
+ Mean error is -1.098    
+ RMS error is 0.9939    
+ Number of data culled is 0000041
+ Prior to data culling ...
+    Chi2 is  3.240    
+    Mean error is -1.115    
+    RMS error is  1.800    
+ ***********************************************************************
+Decrease in objective function is: 0.4541E-01
+Solution did not converge at beta =  7.290    
+Decreasing beta by 0.9000     from  7.290     to  6.561    
