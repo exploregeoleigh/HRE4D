@@ -1,9 +1,8 @@
-PETSC_DIR = ~/codes/petsc
+PETSC_DIR = ../third_party/petsc-3.13.0
 PETSC_ARCH= arch-linux2-c-opt
 
-#PETSC_DIR =/home/john775/codes/petsc_opt/petsc
-#PETSC_ARCH=arch-linux2-c-opt
-f95 = ${PETSC_DIR}/${PETSC_ARCH}/bin/mpif90
+
+f95 = ${PETSC_DIR}/${PETSC_ARCH}/bin/mpif90 -fdefault-double-8 -fdefault-real-8
 libs =
 
 
@@ -11,6 +10,7 @@ CFLAGS = ${PETSC_CC_INCLUDES}
 FFLAGS = ${PETSC_FC_INCLUDES}
 
 include ${PETSC_DIR}/lib/petsc/conf/variables
+
 
 
 objects = FMM_VARS.o VARS.o DISTRIBUTOR.o READ_INP.o READ_INP_FMM.o REORDER_MESH.o\
